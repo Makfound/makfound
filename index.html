@@ -1,328 +1,151 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Makfound</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAKFOUND</title>
   <style>
-    :root {
-      --verde-escuro: #1B4D3E;
-      --dourado: #CBA135;
-      --dourado-claro: #E6C970;
-      --fundo-branco: #FFFFFF;
-      --cinza-claro: #F9F9F9;
-      --cinza-escuro: #333333;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background: var(--cinza-claro);
-      color: var(--cinza-escuro);
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #333;
     }
-
     header {
-      background-color: var(--fundo-branco);
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      border-bottom: 4px solid var(--dourado);
-    }
-
-    header img.logo {
-      max-height: 60px;
-      margin-right: 15px;
-      display: none;
-    }
-
-    header h1 {
-      color: var(--verde-escuro);
-      font-size: 2.5em;
-      font-weight: 900;
-      letter-spacing: 4px;
-      margin: 0;
-      font-family: 'Georgia', serif;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 0 15px;
-    }
-
-    h2.category-title {
-      color: var(--verde-escuro);
-      border-bottom: 3px solid var(--dourado);
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-      font-family: 'Georgia', serif;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 50px;
-      background: var(--fundo-branco);
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    th, td {
-      padding: 12px 10px;
-      text-align: center;
-      border-bottom: 1px solid var(--dourado-claro);
-      vertical-align: middle;
-    }
-
-    th {
-      background-color: var(--dourado);
-      color: var(--verde-escuro);
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 0.9em;
-      font-family: 'Georgia', serif;
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    tr:hover {
-      background-color: var(--dourado-claro);
-    }
-
-    .product-name {
-      font-weight: 700;
-      color: var(--verde-escuro);
-      font-size: 1em;
-      font-family: 'Georgia', serif;
-    }
-
-    .product-image {
-      max-width: 80px;
-      max-height: 80px;
-      object-fit: contain;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-
-    .button {
-      background-color: var(--verde-escuro);
-      color: var(--dourado);
-      padding: 8px 15px;
-      margin: 3px 2px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9em;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-      font-family: 'Georgia', serif;
-      box-shadow: 0 0 5px var(--dourado);
-    }
-
-    .button:hover {
-      background-color: #145633;
+      background-color: #006400;
       color: #fff;
-      box-shadow: 0 0 10px var(--dourado);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
     }
-
-    footer {
-      background-color: var(--verde-escuro);
-      color: var(--dourado);
-      text-align: center;
-      padding: 30px 15px;
-      font-size: 0.9em;
-      letter-spacing: 0.5px;
-      margin-top: 60px;
-      font-family: 'Georgia', serif;
+    .logo {
+      height: 50px;
+      background-color: #fff;
+      padding: 5px 10px;
     }
-
-    footer a {
-      color: var(--dourado);
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      color: #fff;
       text-decoration: none;
+      font-weight: bold;
+    }
+    .categorias {
+      display: flex;
+      overflow-x: auto;
+      padding: 10px;
+      background: #f1f1f1;
+    }
+    .categoria {
+      flex: 0 0 auto;
+      text-align: center;
       margin: 0 10px;
-      font-weight: 700;
-      transition: color 0.3s ease;
     }
-
-    footer a:hover {
-      color: var(--fundo-branco);
+    .categoria img {
+      width: 50px;
+      height: 50px;
+      display: block;
+      margin: 0 auto 5px;
     }
-
-    @media (max-width: 768px) {
-      .product-image {
-        max-width: 60px;
-        max-height: 60px;
-      }
-      th, td {
-        padding: 8px 5px;
-        font-size: 0.85em;
-      }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    h2 {
+      border-bottom: 2px solid #006400;
+      padding-bottom: 5px;
+      color: #006400;
+    }
+    .produto {
+      background: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .produto p {
+      margin: 5px 0;
+    }
+    footer {
+      background-color: #006400;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .socials input, .socials textarea {
+      display: block;
+      width: 90%;
+      margin: 5px auto;
+      padding: 8px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="URL-DA-SUA-LOGO.png" alt="Makfound Logo" class="logo" />
-    <h1>MAKFOUND</h1>
-  </header>
-
-  <main>
-    <!-- Modelo categoria -->
+    <div class="logo">Logo aqui</div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Categorias</a>
+      <a href="#">Shopee</a>
+      <a href="#">Shein</a>
+    </nav>
+  </header>  <div class="categorias">
+    <div class="categoria">
+      <img src="https://via.placeholder.com/50" alt="Moda" />
+      <div>Moda</div>
+    </div>
+    <div class="categoria">
+      <img src="https://via.placeholder.com/50" alt="Beleza" />
+      <div>Beleza</div>
+    </div>
+    <div class="categoria">
+      <img src="https://via.placeholder.com/50" alt="Casa" />
+      <div>Casa</div>
+    </div>
+    <div class="categoria">
+      <img src="https://via.placeholder.com/50" alt="Eletrônicos" />
+      <div>Eletrônicos</div>
+    </div>
+    <div class="categoria">
+      <img src="https://via.placeholder.com/50" alt="Infantil" />
+      <div>Infantil</div>
+    </div>
+  </div>  <main>
     <section>
-      <h2 class="category-title">Moda Feminina</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th colspan="3">Shopee</th>
-            <th colspan="3">Shein</th>
-          </tr>
-          <tr>
-            <th></th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Produto exemplo -->
-          <tr>
-            <td>
-              <div class="product-name">Produto Exemplo 1</div>
-              <img src="URL-IMAGEM-PRODUTO-1" alt="Produto Exemplo 1" class="product-image" />
-            </td>
-            <td><a href="URL-PRODUTO-SHOPEE-1" target="_blank" class="button">Link</a></td>
-            <td><a href="URL-PRODUTO-SHOPEE-2" target="_blank" class="button">Link</a></td>
-            <td><a href="URL-PRODUTO-SHOPEE-3" target="_blank" class="button">Link</a></td>
-            <td><a href="URL-PRODUTO-SHEIN-1" target="_blank" class="button">Link</a></td>
-            <td><a href="URL-PRODUTO-SHEIN-2" target="_blank" class="button">Link</a></td>
-            <td><a href="URL-PRODUTO-SHEIN-3" target="_blank" class="button">Link</a></td>
-          </tr>
-          <!-- Adicione até 10 produtos por categoria -->
-        </tbody>
-      </table>
-    </section>
+      <h2>Achadinhos Shopee</h2>
+      <div class="produto">
+        <p><strong>Produto 1:</strong></p>
+        <p>🛒 Opção 1 - <a href="#">seu link aqui</a></p>
+        <p>🛒 Opção 2 - <a href="#">seu link aqui</a></p>
+        <p>🛒 Opção 3 - <a href="#">seu link aqui</a></p>
+      </div>
+      <!-- repita até 10 produtos -->
+    </section><section>
+  <h2>Achadinhos Shein</h2>
+  <div class="produto">
+    <p><strong>Produto 1:</strong></p>
+    <p>🛒 Opção 1 - <a href="#">seu link aqui</a></p>
+    <p>🛒 Opção 2 - <a href="#">seu link aqui</a></p>
+    <p>🛒 Opção 3 - <a href="#">seu link aqui</a></p>
+  </div>
+  <!-- repita até 10 produtos -->
+</section>
 
-    <!-- Repita essa estrutura para as outras categorias -->
-    <section>
-      <h2 class="category-title">Eletrônicos e Gadgets</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th colspan="3">Shopee</th>
-            <th colspan="3">Shein</th>
-          </tr>
-          <tr>
-            <th></th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Produtos aqui -->
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2 class="category-title">Beleza e Cuidados Pessoais</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th colspan="3">Shopee</th>
-            <th colspan="3">Shein</th>
-          </tr>
-          <tr>
-            <th></th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Produtos aqui -->
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2 class="category-title">Casa e Decoração</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th colspan="3">Shopee</th>
-            <th colspan="3">Shein</th>
-          </tr>
-          <tr>
-            <th></th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Produtos aqui -->
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2 class="category-title">Fitness e Esporte</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th colspan="3">Shopee</th>
-            <th colspan="3">Shein</th>
-          </tr>
-          <tr>
-            <th></th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-            <th>Opção 1</th>
-            <th>Opção 2</th>
-            <th>Opção 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Produtos aqui -->
-        </tbody>
-      </table>
-    </section>
-  </main>
-
-  <footer>
-    <p>Contato: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
-    <p>
-      Redes sociais: 
-      <a href="https://instagram.com/seuusuario" target="_blank">Instagram</a> | 
-      <a href="https://tiktok.com/@seuusuario" target="_blank">TikTok</a>
-    </p>
+  </main>  <footer>
+    <h3>MAKFOUND</h3>
+    <p>Plataforma de Achadinhos</p>
+    <div class="socials">
+      <label>Seu e-mail:</label>
+      <input type="email" placeholder="email@exemplo.com" />
+      <label>Instagram:</label>
+      <input type="text" placeholder="@makfound" />
+      <label>TikTok:</label>
+      <input type="text" placeholder="@makfound" />
+    </div>
   </footer>
 </body>
-  </html>
+</html>
