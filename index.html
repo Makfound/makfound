@@ -2,98 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MAKFOUND</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #333;
-    }
-    header {
-      background-color: #006400;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-    }
-    .logo {
-      height: 50px;
-      background-color: #fff;
-      padding: 5px 10px;
-      color: #006400;
-      font-weight: bold;
-    }
-    nav {
-      display: flex;
-      gap: 15px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .categorias {
-      display: flex;
-      overflow-x: auto;
-      padding: 10px;
-      background: #f1f1f1;
-    }
-    .categoria {
-      flex: 0 0 auto;
-      text-align: center;
-      margin: 0 10px;
-    }
-    .categoria img {
-      width: 50px;
-      height: 50px;
-      display: block;
-      margin: 0 auto 5px;
-    }
-    main {
-      padding: 20px;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    h2 {
-      border-bottom: 2px solid #daa520;
-      padding-bottom: 5px;
-      color: #006400;
-    }
-    .produto {
-      background: #fff8dc;
-      padding: 10px;
-      margin: 10px;
-      border: 2px solid #daa520;
-      border-radius: 8px;
-    }
-    .produtos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-    footer {
-      background-color: #006400;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    .socials input, .socials textarea {
-      display: block;
-      width: 90%;
-      margin: 5px auto;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">Logo aqui</div>
+    <div class="logo">LOGO AQUI</div>
     <nav>
       <a href="#">Início</a>
       <a href="#">Categorias</a>
@@ -103,46 +18,48 @@
   </header>
 
   <div class="categorias">
-    <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Moda" />
-      <div>Moda</div>
-    </div>
-    <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Beleza" />
-      <div>Beleza</div>
-    </div>
-    <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Casa" />
-      <div>Casa</div>
-    </div>
-    <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Eletrônicos" />
-      <div>Eletrônicos</div>
-    </div>
-    <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Infantil" />
-      <div>Infantil</div>
-    </div>
+    <button class="categoria" data-filtro="todos">Todos</button>
+    <button class="categoria" data-filtro="moda">Moda</button>
+    <button class="categoria" data-filtro="beleza">Beleza</button>
+    <button class="categoria" data-filtro="casa">Casa</button>
+    <button class="categoria" data-filtro="eletronicos">Eletrônicos</button>
+    <button class="categoria" data-filtro="infantil">Infantil</button>
   </div>
 
   <main>
     <section>
       <h2>Achadinhos Shopee</h2>
-      <div class="produtos-grid">
-        <div class="produto">URL PRODUTO 1 (Shopee)<br>seu link aqui</div>
-        <div class="produto">URL PRODUTO 2 (Shopee)<br>seu link aqui</div>
-        <div class="produto">URL PRODUTO 3 (Shopee)<br>seu link aqui</div>
-        <!-- Adicione mais produtos conforme necessário -->
+      <div class="produtos">
+        <div class="produto" data-categoria="moda">
+          <img src="https://via.placeholder.com/150" alt="Produto Moda" />
+          <p>Produto de Moda<br><a href="#">Link</a></p>
+        </div>
+        <div class="produto" data-categoria="beleza">
+          <img src="https://via.placeholder.com/150" alt="Produto Beleza" />
+          <p>Produto de Beleza<br><a href="#">Link</a></p>
+        </div>
+        <div class="produto" data-categoria="casa">
+          <img src="https://via.placeholder.com/150" alt="Produto Casa" />
+          <p>Produto de Casa<br><a href="#">Link</a></p>
+        </div>
       </div>
     </section>
 
     <section>
       <h2>Achadinhos Shein</h2>
-      <div class="produtos-grid">
-        <div class="produto">URL PRODUTO 1 (Shein)<br>seu link aqui</div>
-        <div class="produto">URL PRODUTO 2 (Shein)<br>seu link aqui</div>
-        <div class="produto">URL PRODUTO 3 (Shein)<br>seu link aqui</div>
-        <!-- Adicione mais produtos conforme necessário -->
+      <div class="produtos">
+        <div class="produto" data-categoria="eletronicos">
+          <img src="https://via.placeholder.com/150" alt="Produto Eletrônico" />
+          <p>Produto Eletrônico<br><a href="#">Link</a></p>
+        </div>
+        <div class="produto" data-categoria="infantil">
+          <img src="https://via.placeholder.com/150" alt="Produto Infantil" />
+          <p>Produto Infantil<br><a href="#">Link</a></p>
+        </div>
+        <div class="produto" data-categoria="moda">
+          <img src="https://via.placeholder.com/150" alt="Produto Moda 2" />
+          <p>Produto de Moda<br><a href="#">Link</a></p>
+        </div>
       </div>
     </section>
   </main>
@@ -152,12 +69,14 @@
     <p>Plataforma de Achadinhos</p>
     <div class="socials">
       <label>Seu e-mail:</label>
-      <input type="email" placeholder="email@exemplo.com" />
+      <input type="email" placeholder="email@exemplo.com">
       <label>Instagram:</label>
-      <input type="text" placeholder="@makfound" />
+      <input type="text" placeholder="@makfound">
       <label>TikTok:</label>
-      <input type="text" placeholder="@makfound" />
+      <input type="text" placeholder="@makfound">
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
