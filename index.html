@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,10 +19,12 @@
       align-items: center;
       padding: 15px 20px;
     }
-    .logo img {
+    .logo {
       height: 50px;
       background-color: #fff;
       padding: 5px 10px;
+      color: #006400;
+      font-weight: bold;
     }
     nav {
       display: flex;
@@ -56,19 +59,21 @@
       margin-bottom: 30px;
     }
     h2 {
-      border-bottom: 2px solid #006400;
+      border-bottom: 2px solid #daa520;
       padding-bottom: 5px;
       color: #006400;
     }
     .produto {
-      background: #f9f9f9;
+      background: #fff8dc;
       padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+      margin: 10px;
+      border: 2px solid #daa520;
+      border-radius: 8px;
     }
-    .produto p {
-      margin: 5px 0;
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
     footer {
       background-color: #006400;
@@ -76,79 +81,82 @@
       text-align: center;
       padding: 20px;
     }
-    .socials {
-      margin-top: 10px;
-    }
-    .socials a {
-      margin: 0 10px;
-      display: inline-block;
-    }
-    .socials img {
-      width: 24px;
-      height: 24px;
+    .socials input, .socials textarea {
+      display: block;
+      width: 90%;
+      margin: 5px auto;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="https://i.ibb.co/M5p6CDPD/1000001348-removebg-preview.png" alt="Logo MAKFOUND" />
-    </div>
+    <div class="logo">Logo aqui</div>
     <nav>
       <a href="#">Início</a>
       <a href="#">Categorias</a>
       <a href="#">Shopee</a>
       <a href="#">Shein</a>
     </nav>
-  </header>  <div class="categorias">
+  </header>
+
+  <div class="categorias">
     <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Bobbie Goda" />
-      <div>Bobbie Goda</div>
+      <img src="https://via.placeholder.com/50" alt="Moda" />
+      <div>Moda</div>
     </div>
     <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Labubu" />
-      <div>Labubu</div>
+      <img src="https://via.placeholder.com/50" alt="Beleza" />
+      <div>Beleza</div>
     </div>
     <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Utensílios" />
-      <div>Utensílios</div>
+      <img src="https://via.placeholder.com/50" alt="Casa" />
+      <div>Casa</div>
     </div>
     <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Tecnologia" />
-      <div>Tecnologia</div>
+      <img src="https://via.placeholder.com/50" alt="Eletrônicos" />
+      <div>Eletrônicos</div>
     </div>
     <div class="categoria">
-      <img src="https://via.placeholder.com/50" alt="Acessórios" />
-      <div>Acessórios</div>
+      <img src="https://via.placeholder.com/50" alt="Infantil" />
+      <div>Infantil</div>
     </div>
-  </div>  <main>
+  </div>
+
+  <main>
     <section>
       <h2>Achadinhos Shopee</h2>
-      <div class="produto">
-        <p><strong>Produto 1:</strong></p>
-        <p>🛒 Opção 1 - <a href="#">seu link aqui</a></p>
-        <p>🛒 Opção 2 - <a href="#">seu link aqui</a></p>
-        <p>🛒 Opção 3 - <a href="#">seu link aqui</a></p>
+      <div class="produtos-grid">
+        <div class="produto">URL PRODUTO 1 (Shopee)<br>seu link aqui</div>
+        <div class="produto">URL PRODUTO 2 (Shopee)<br>seu link aqui</div>
+        <div class="produto">URL PRODUTO 3 (Shopee)<br>seu link aqui</div>
+        <!-- Adicione mais produtos conforme necessário -->
       </div>
-      <!-- repetir até 10 produtos -->
-    </section><section>
-  <h2>Achadinhos Shein</h2>
-  <div class="produto">
-    <p><strong>Produto 1:</strong></p>
-    <p>🛒 Opção 1 - <a href="#">seu link aqui</a></p>
-    <p>🛒 Opção 2 - <a href="#">seu link aqui</a></p>
-    <p>🛒 Opção 3 - <a href="#">seu link aqui</a></p>
-  </div>
-  <!-- repetir até 10 produtos -->
-</section>
+    </section>
 
-  </main>  <footer>
+    <section>
+      <h2>Achadinhos Shein</h2>
+      <div class="produtos-grid">
+        <div class="produto">URL PRODUTO 1 (Shein)<br>seu link aqui</div>
+        <div class="produto">URL PRODUTO 2 (Shein)<br>seu link aqui</div>
+        <div class="produto">URL PRODUTO 3 (Shein)<br>seu link aqui</div>
+        <!-- Adicione mais produtos conforme necessário -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <h3>MAKFOUND</h3>
     <p>Plataforma de Achadinhos</p>
     <div class="socials">
-      <a href="https://instagram.com/makfound" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
-      <a href="https://tiktok.com/@makfound" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok" /></a>
-      <a href="contato.makfound@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" /></a>
+      <label>Seu e-mail:</label>
+      <input type="email" placeholder="email@exemplo.com" />
+      <label>Instagram:</label>
+      <input type="text" placeholder="@makfound" />
+      <label>TikTok:</label>
+      <input type="text" placeholder="@makfound" />
     </div>
   </footer>
 </body>
